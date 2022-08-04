@@ -1,16 +1,17 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import { useRecoilState } from "recoil";
 import styled from "styled-components";
+import { loginState } from "../recoil/state";
 import { FlexColumnDiv } from "../styles/utility.style";
 
-function footer() {
-  return <div>못찾겠다 꾀꼬리</div>;
-}
-
 export default function Login() {
+  const [isLogin, setIsLgoin] = useRecoilState(loginState);
+
   // const navigate = useNavigate();
   const handleSumbit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setIsLgoin(true);
   };
 
   return (
@@ -21,7 +22,6 @@ export default function Login() {
         <InputBox type="password" placeholder="비밀번호"></InputBox>
         <LoginBtn>로그인</LoginBtn>
       </LoginForm>
-      {footer()}
     </LoginPageContainer>
   );
 }
