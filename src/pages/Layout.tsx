@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Header from "../components/useCallback/Header";
 import { FlexColumnDiv } from "../styles/utility.style";
 
 interface Props {
@@ -7,7 +8,12 @@ interface Props {
 }
 
 export default function Layout({ children, text }: Props) {
-  return <MainContainer>{children}</MainContainer>;
+  return (
+    <MainContainer>
+      <Header />
+      {children}
+    </MainContainer>
+  );
 }
 
 const MainContainer = styled(FlexColumnDiv)`

@@ -1,34 +1,41 @@
-import { useRef } from "react";
-import { useRecoilState, useRecoilValue } from "recoil";
+import React from "react";
+import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
-import { textSelector, textState } from "../recoil/state";
-import Layout from "./Layout";
+import { FlexColumnDiv } from "../styles/utility.style";
 
 export default function MainPage() {
-  const [text, setText] = useRecoilState(textState);
-  const textLength = useRecoilValue(textSelector);
-  const inputRef = useRef<HTMLInputElement>(null);
+  const navigate = useNavigate();
 
-  const handleButtonClick = () => {
-    inputRef.current?.focus();
-  };
-
-  const handleTextarea = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
-    setText(e.target.value);
+  const handleButtonClick = (
+    e: React.MouseEvent<HTMLButtonElement>,
+    route: string
+  ) => {
+    e.preventDefault();
+    navigate(`${route}`);
   };
 
   return (
-    <Layout>
-      <>
-        <div>{textLength}</div>
-        <MainDiv>{text}</MainDiv>
-        <MainTextArea onChange={handleTextarea} value={text} />
-        <input ref={inputRef} />
-        <button onClick={handleButtonClick}>Clear</button>
-      </>
-    </Layout>
+    <MainDiv>
+      React Hooks Practice
+      <NormalBtn onClick={(e) => handleButtonClick(e, "/usecallback")}>
+        useCallback
+      </NormalBtn>
+      <NormalBtn onClick={(e) => handleButtonClick(e, "/usecallback")}>
+        useEvent
+      </NormalBtn>
+    </MainDiv>
   );
 }
 
-const MainDiv = styled.div``;
-const MainTextArea = styled.textarea``;
+const MainDiv = styled(FlexColumnDiv)`
+  font-size: 25px;
+  font-weight: bold;
+  gap: 15px;
+  height: 100vh;
+  width: 100vw;
+`;
+const NormalBtn = styled.button`
+  height: 50px;
+  width: 250px;
+  font-size: 18px;
+`;
