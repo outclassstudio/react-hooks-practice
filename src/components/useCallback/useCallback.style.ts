@@ -16,6 +16,14 @@ export const ChangeBtn = styled.button`
   height: 30px;
 `;
 
+export const NumberWrapper = styled(FlexColumnDiv)`
+  font-size: 12px;
+  font-weight: 300;
+  padding: 5px;
+  border: 1px solid #7c7c7c;
+  gap: 10px;
+`;
+
 export const NumberInput = styled.input`
   width: 192px;
   height: 25px;

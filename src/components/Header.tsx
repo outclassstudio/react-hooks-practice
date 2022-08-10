@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
-import { FlexDiv } from "../../styles/utility.style";
+import { FlexDiv } from "../styles/utility.style";
 
 export default function Header() {
   const navigate = useNavigate();

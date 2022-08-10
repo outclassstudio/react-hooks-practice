@@ -20,9 +20,6 @@ export default function MainPage() {
       <NormalBtn onClick={(e) => handleButtonClick(e, "/usecallback")}>
         useCallback
       </NormalBtn>
-      <NormalBtn onClick={(e) => handleButtonClick(e, "/usecallback")}>
-        useEvent
-      </NormalBtn>
     </MainDiv>
   );
 }
