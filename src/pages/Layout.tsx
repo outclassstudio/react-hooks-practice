@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Header from "../components/useCallback/Header";
+import Header from "../components/Header";
 import { FlexColumnDiv } from "../styles/utility.style";
 
 interface Props {

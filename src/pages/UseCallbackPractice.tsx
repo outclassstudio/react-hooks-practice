@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import ApplyUseCallback from "../components/useCallback/ApplyUseCallback";
-import NoUseCallback from "../components/useCallback/noUseCallback";
+import NoUseCallback from "../components/useCallback/NoUseCallback";
 import { FlexDiv } from "../styles/utility.style";
 import Layout from "./Layout";
 
