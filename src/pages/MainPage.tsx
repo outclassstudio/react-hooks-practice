@@ -16,21 +16,34 @@ export default function MainPage() {
 
   return (
     <MainDiv>
-      React Hooks Practice
-      <NormalBtn onClick={(e) => handleButtonClick(e, "/usecallback")}>
-        useCallback
-      </NormalBtn>
+      <SubContainer>
+        React Hooks Practice
+        <NormalBtn onClick={(e) => handleButtonClick(e, "/usecallback")}>
+          useCallback
+        </NormalBtn>
+      </SubContainer>
+      <SubContainer>
+        React Patterns
+        <NormalBtn onClick={(e) => handleButtonClick(e, "/observable")}>
+          Observable
+        </NormalBtn>
+      </SubContainer>
     </MainDiv>
   );
 }
 
 const MainDiv = styled(FlexColumnDiv)`
-  font-size: 25px;
-  font-weight: bold;
-  gap: 15px;
+  gap: 30px;
   height: 100vh;
   width: 100vw;
 `;
+
+const SubContainer = styled(FlexColumnDiv)`
+  font-weight: bold;
+  font-size: 25px;
+  gap: 15px;
+`;
+
 const NormalBtn = styled.button`
   height: 50px;
   width: 250px;
