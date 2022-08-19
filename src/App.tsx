@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import ObservableMain from "./components/observable/ObservableMain";
 import MainPage from "./pages/MainPage";
+import ObservablePractice from "./pages/ObservablePractice";
 import UseCallbackPractice from "./pages/UseCallbackPractice";
 
 function App() {
@@ -9,7 +9,7 @@ function App() {
       <Routes>
         <Route path="/" element={<MainPage />} />
         <Route path="/usecallback" element={<UseCallbackPractice />} />
-        <Route path="/observable" element={<ObservableMain />} />
+        <Route path="/observable" element={<ObservablePractice />} />
       </Routes>
     </Router>
   );
