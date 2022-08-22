@@ -6,8 +6,8 @@ export default function Header() {
   const navigate = useNavigate();
 
   return (
-    <HeaderContainer onClick={() => navigate("/")}>
-      <Menu>홈으로</Menu>
+    <HeaderContainer>
+      <Menu onClick={() => navigate("/")}>홈으로</Menu>
     </HeaderContainer>
   );
 }
