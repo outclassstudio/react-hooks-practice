@@ -21,6 +21,9 @@ export default function MainPage() {
         <NormalBtn onClick={(e) => handleButtonClick(e, "/usecallback")}>
           useCallback
         </NormalBtn>
+        <NormalBtn onClick={(e) => handleButtonClick(e, "/uselayouteffect")}>
+          useLayoutEffect
+        </NormalBtn>
       </SubContainer>
       <SubContainer>
         React Patterns
